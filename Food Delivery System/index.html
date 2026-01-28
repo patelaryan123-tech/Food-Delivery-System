@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eatify | Multi-Vendor Food Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/eatify-logo.png" alt="Eatify Logo">
+    <span>Eatify</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="vendor.html">Restaurants</a></li>
+    <li><a href="cart.html">Cart</a></li>
+
+    <!-- 🔥 NEW LINKS ADDED -->
+    <li><a href="checkout.html">Checkout</a></li>
+    <li><a href="delivery.html">Delivery</a></li>
+    <li><a href="bill.html">Bill</a></li>
+    <li><a href="admin.html">Admin</a></li>
+
+    <li><a href="login.html" id="authBtn" class="nav-btn">Login</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Delicious Food,<br><span>Delivered Fast</span></h1>
+    <p>Order from 1000+ restaurants near you</p>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for restaurant or dish...">
+      <button>Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories">
+  <button class="category active" data-category="all">All</button>
+  <button class="category" data-category="pizza">🍕 Pizza</button>
+  <button class="category" data-category="burger">🍔 Burger</button>
+  <button class="category" data-category="chinese">🍜 Chinese</button>
+  <button class="category" data-category="healthy">🥗 Healthy</button>
+  <button class="category" data-category="desserts">🍰 Desserts</button>
+</section>
+
+<!-- ================= RESTAURANTS ================= -->
+<section class="restaurants">
+  <h2>Popular Restaurants</h2>
+
+  <div class="restaurant-grid">
+
+    <div class="restaurant-card" data-category="pizza" data-name="pizza palace">
+      <img src="images/pizza.jpg">
+      <div class="card-info">
+        <h3>Pizza Palace</h3>
+        <p>Italian • Fast Food</p>
+        <div class="rating">⭐ 4.5 <span>30 mins</span></div>
+      </div>
+    </div>
+
+    <div class="restaurant-card" data-category="burger" data-name="burger town">
+      <img src="images/burger.jpg">
+      <div class="card-info">
+        <h3>Burger Town</h3>
+        <p>American • Fast Food</p>
+        <div class="rating">⭐ 4.6 <span>20 mins</span></div>
+      </div>
+    </div>
+
+    <div class="restaurant-card" data-category="chinese" data-name="chinese hub">
+      <img src="images/chinese.jpg">
+      <div class="card-info">
+        <h3>Chinese Hub</h3>
+        <p>Indian • Mughlai</p>
+        <div class="rating">⭐ 4.3 <span>25 mins</span></div>
+      </div>
+    </div>
+
+    <div class="restaurant-card" data-category="healthy" data-name="green bowl">
+      <img src="images/healthy.jpg">
+      <div class="card-info">
+        <h3>Green Bowl</h3>
+        <p>Salads • Vegan • Healthy</p>
+        <div class="rating">⭐ 4.7 <span>18 mins</span></div>
+      </div>
+    </div>
+
+    <div class="restaurant-card" data-category="desserts" data-name="sweet delight">
+      <img src="images/dessert.jpg">
+      <div class="card-info">
+        <h3>Sweet Delight</h3>
+        <p>Cakes • Ice Cream • Desserts</p>
+        <div class="rating">⭐ 4.8 <span>22 mins</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Eatify • All Rights Reserved</p>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>

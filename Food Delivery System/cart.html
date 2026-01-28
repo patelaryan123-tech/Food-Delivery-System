@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart | FoodieHub</title>
+  <link rel="stylesheet" href="css/cart.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="cart-container">
+
+  <!-- Background floating circles -->
+  <div class="cart-bg">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+
+  <h1>Your Cart</h1>
+
+  <div class="cart-items">
+
+    <div class="cart-card">
+      <div class="item-img">
+        <img src="images/pizza.jpg" alt="Cheese Pizza">
+      </div>
+      <div class="item-info">
+        <h3>Cheese Pizza</h3>
+        <p class="price">₹250</p>
+        <div class="quantity">
+          <button class="qty-btn minus">-</button>
+          <span>1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="cart-card">
+      <div class="item-img">
+        <img src="images/garlic.jpg" alt="Garlic Bread">
+      </div>
+      <div class="item-info">
+        <h3>Garlic Bread</h3>
+        <p class="price">₹150</p>
+        <div class="quantity">
+          <button class="qty-btn minus">-</button>
+          <span>2</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+  </div>
+
+  <div class="cart-summary">
+    <p>Total: <span>₹550</span></p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+</div>
+<script src="js/cart.js"></script>
+</body>
+</html>

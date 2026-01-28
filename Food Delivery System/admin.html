@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<h1>🍕 Vendor / Admin Panel</h1>
+
+<!-- ADD FOOD -->
+<section>
+  <h2>Add Food</h2>
+  <input id="name" placeholder="Name">
+  <input id="price" placeholder="Price">
+  <input id="image" placeholder="Image URL">
+  <button onclick="addFood()">Add</button>
+</section>
+
+<!-- FOOD LIST -->
+<section>
+  <h2>Food Items</h2>
+  <div id="foodList"></div>
+</section>
+
+<!-- LIVE ORDERS -->
+<section>
+  <h2>Live Orders</h2>
+  <div id="orders"></div>
+</section>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

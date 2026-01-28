@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+</head>
+<body>
+
+<h2>Delivery Details</h2>
+<link rel="stylesheet" href="css/checkout.css">
+
+<form id="checkoutForm">
+  <input type="text" id="name" placeholder="Full Name" required />
+  <input type="text" id="phone" placeholder="Phone Number" required />
+  <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+  <input type="hidden" id="lat">
+  <input type="hidden" id="lng">
+
+  <button type="submit">Confirm Order</button>
+</form>
+
+<p id="locationStatus"></p>
+
+<script src="js/checkout.js"></script>
+</body>
+</html>

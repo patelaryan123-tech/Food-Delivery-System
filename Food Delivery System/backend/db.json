@@ -1,0 +1,13 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Cheese Burger",
+      "price": 159,
+      "stock": true,
+      "image": "images/burger2.jpg"
+    }
+  ],
+  "orders": []
+}
+

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #00f2fe, transparent 45%),
+    radial-gradient(circle at bottom right, #4facfe, transparent 45%),
+    linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ================= FLOATING GLOW ================= */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%);
+  border-radius: 50%;
+  animation: floatGlow 12s infinite alternate ease-in-out;
+}
+
+body::before {
+  top: -120px;
+  left: -120px;
+}
+
+body::after {
+  bottom: -140px;
+  right: -140px;
+  animation-delay: 3s;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0); }
+  to   { transform: translateY(60px); }
+}
+
+/* ================= BILL CARD ================= */
+.bill-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(14px);
+  padding: 40px 35px;
+  border-radius: 26px;
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.4);
+  animation: billEntry 1s cubic-bezier(.23,1.01,.32,1);
+}
+
+/* ENTRY ANIMATION */
+@keyframes billEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.75) translateY(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ================= TITLE ================= */
+.bill-box h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2.5s infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px rgba(79,172,254,0.4); }
+  to   { text-shadow: 0 0 25px rgba(79,172,254,0.8); }
+}
+
+/* ================= ITEMS ================= */
+#items {
+  margin-bottom: 20px;
+}
+
+#items div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px dashed #ddd;
+  animation: slideItem 0.6s ease forwards;
+}
+
+@keyframes slideItem {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= TOTAL ================= */
+.total {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+  color: #222;
+}
+
+/* ================= PAYMENT ================= */
+.bill-box h3 {
+  margin: 30px 0 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ================= QR ================= */
+#qr {
+  display: block;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: qrPulse 1.8s infinite alternate;
+}
+
+@keyframes qrPulse {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(79,172,254,0.4);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(79,172,254,0.8);
+  }
+}
+
+/* ================= PAY BUTTON ================= */
+#payBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  box-shadow: 0 20px 45px rgba(79,172,254,0.6);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BUTTON SHINE */
+#payBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+#payBtn:hover::before {
+  left: 120%;
+}
+
+#payBtn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 30px 65px rgba(79,172,254,0.75);
+}
+
+#payBtn:active {
+  transform: scale(0.96);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .bill-box {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .bill-box h2 {
+    font-size: 26px;
+  }
+
+  #qr {
+    width: 160px;
+    height: 160px;
+  }
+}

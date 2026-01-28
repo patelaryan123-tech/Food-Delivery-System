@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Palace | Eatify</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/eatify-logo.png" alt="Eatify Logo">
+    <span>Eatify</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="login.html" class="nav-btn">Login</a></li>
+  </ul>
+</nav>
+
+<section class="vendor-header">
+  <div class="vendor-info">
+    <h1>Pizza Palace</h1>
+    <p>Italian • Fast Food • ₹200 for one</p>
+    <div class="meta">
+      <span>⭐ 4.5</span>
+      <span>⏱ 30 mins</span>
+      <span>📍 3 km</span>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="menu-list">
+
+    <!-- 1 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/pizza1.jpg"></div>
+      <div class="menu-text">
+        <h3>Margherita Pizza</h3>
+        <p class="price">₹199</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="1" data-name="Margherita Pizza"
+          data-price="199" data-image="images/pizza1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/pizza2.jpg"></div>
+      <div class="menu-text">
+        <h3>Cheese Burst Pizza</h3>
+        <p class="price">₹299</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="2" data-name="Cheese Burst Pizza"
+          data-price="299" data-image="images/pizza2.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/pizza3.jpg"></div>
+      <div class="menu-text">
+        <h3>Paneer Tikka Pizza</h3>
+        <p class="price">₹329</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="3" data-name="Paneer Tikka Pizza"
+          data-price="329" data-image="images/pizza3.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/pizza4.jpg"></div>
+      <div class="menu-text">
+        <h3>Farmhouse Pizza</h3>
+        <p class="price">₹349</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="4" data-name="Farmhouse Pizza"
+          data-price="349" data-image="images/pizza4.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/burger1.jpg"></div>
+      <div class="menu-text">
+        <h3>Veg Burger</h3>
+        <p class="price">₹129</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="5" data-name="Veg Burger"
+          data-price="129" data-image="images/burger1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 6 OUT OF STOCK -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/burger2.jpg"></div>
+      <div class="menu-text">
+        <h3>Cheese Burger</h3>
+        <p class="price">₹159</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="6" data-name="Cheese Burger"
+          data-price="159" data-image="images/burger2.jpg" data-stock="false">Add</button>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/burger3.jpg"></div>
+      <div class="menu-text">
+        <h3>Paneer Burger</h3>
+        <p class="price">₹179</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="7" data-name="Paneer Burger"
+          data-price="179" data-image="images/burger3.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/fries1.jpg"></div>
+      <div class="menu-text">
+        <h3>French Fries</h3>
+        <p class="price">₹99</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="8" data-name="French Fries"
+          data-price="99" data-image="images/fries1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/fries2.jpg"></div>
+      <div class="menu-text">
+        <h3>Peri Peri Fries</h3>
+        <p class="price">₹129</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="9" data-name="Peri Peri Fries"
+          data-price="129" data-image="images/fries2.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/momos1.jpg"></div>
+      <div class="menu-text">
+        <h3>Veg Momos</h3>
+        <p class="price">₹119</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="10" data-name="Veg Momos"
+          data-price="119" data-image="images/momos1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/momos2.jpg"></div>
+      <div class="menu-text">
+        <h3>Fried Momos</h3>
+        <p class="price">₹149</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="11" data-name="Fried Momos"
+          data-price="149" data-image="images/momos2.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/biryani1.jpg"></div>
+      <div class="menu-text">
+        <h3>Veg Biryani</h3>
+        <p class="price">₹199</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="12" data-name="Veg Biryani"
+          data-price="199" data-image="images/biryani1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/biryani2.jpg"></div>
+      <div class="menu-text">
+        <h3>Paneer Biryani</h3>
+        <p class="price">₹229</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="13" data-name="Paneer Biryani"
+          data-price="229" data-image="images/biryani2.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/paneer1.jpg"></div>
+      <div class="menu-text">
+        <h3>Butter Paneer</h3>
+        <p class="price">₹249</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="14" data-name="Butter Paneer"
+          data-price="249" data-image="images/paneer1.jpg" data-stock="true">Add</button>
+      </div>
+    </div>
+
+    <!-- 15 OUT OF STOCK -->
+    <div class="menu-card">
+      <div class="menu-img"><img src="images/paneer2.jpg"></div>
+      <div class="menu-text">
+        <h3>Shahi Paneer</h3>
+        <p class="price">₹259</p>
+        <p class="stock-status"></p>
+        <button class="add-btn" data-id="15" data-name="Shahi Paneer"
+          data-price="259" data-image="images/paneer2.jpg" data-stock="false">Add</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

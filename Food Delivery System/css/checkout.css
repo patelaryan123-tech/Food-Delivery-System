@@ -1,0 +1,159 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ff416c, #ff4b2b, #ffb347, #00c6ff);
+  background-size: 300% 300%;
+  animation: bgMove 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Animated gradient background */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= HEADING ================= */
+h2 {
+  color: #fff;
+  font-size: 34px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #fff; }
+  to   { text-shadow: 0 0 25px #ffeb3b, 0 0 40px #ff5722; }
+}
+
+/* ================= FORM CARD ================= */
+form {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  border-radius: 20px;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.3);
+
+  animation: cardEntry 0.8s ease;
+}
+
+@keyframes cardEntry {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= INPUTS ================= */
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  color: #222;
+  background: rgba(255,255,255,0.9);
+  transition: all 0.35s ease;
+}
+
+/* Floating glow on focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  transform: scale(1.03);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.6),
+              0 0 20px rgba(255,87,34,0.8);
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #00ff9c);
+  background-size: 200% 200%;
+  animation: btnGradient 3s ease infinite;
+
+  box-shadow: 0 15px 40px rgba(0,114,255,0.5);
+  transition: transform 0.25s ease;
+}
+
+@keyframes btnGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 25px 55px rgba(0,255,156,0.6);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ================= LOCATION STATUS ================= */
+#locationStatus {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  animation: fadePulse 1.8s infinite;
+}
+
+@keyframes fadePulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 26px;
+  }
+
+  form {
+    padding: 25px;
+  }
+}
