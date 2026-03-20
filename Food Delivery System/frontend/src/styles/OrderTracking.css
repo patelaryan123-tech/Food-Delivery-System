@@ -1,0 +1,205 @@
+/* ================= ORDER TRACKING ================= */
+.tracking-body {
+    min-height: 100vh;
+    padding: 30px 20px 60px;
+    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.05), transparent);
+}
+
+.dark-mode .tracking-body { background: #0f172a; }
+
+.tracking-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tracking-header h2 { font-size: 28px; font-weight: 800; }
+
+.order-id-badge {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+/* ETA Card */
+.eta-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .eta-card { background: #1e293b; }
+
+.eta-circle {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.eta-time { font-size: 28px; font-weight: 900; line-height: 1; }
+.eta-label { font-size: 12px; opacity: 0.8; }
+
+.eta-info h3 { font-size: 20px; margin-bottom: 4px; }
+.eta-info p { color: #6b7280; font-size: 14px; }
+
+/* Status Steps */
+.tracking-steps {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .tracking-steps { background: #1e293b; }
+
+.tracking-step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-circle {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 3px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #9ca3af;
+    background: white;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.dark-mode .step-circle {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.tracking-step.completed .step-circle {
+    border-color: #6366f1;
+    background: #6366f1;
+    color: white;
+}
+
+.tracking-step.active .step-circle {
+    border-color: #a855f7;
+    background: #a855f7;
+    color: white;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(168, 85, 247, 0.6); }
+}
+
+.step-line {
+    width: 3px;
+    height: 40px;
+    background: #e5e7eb;
+    transition: background 0.5s;
+}
+
+.dark-mode .step-line { background: #334155; }
+
+.step-line.filled {
+    background: linear-gradient(to bottom, #6366f1, #a855f7);
+}
+
+.step-info { padding: 10px 0 24px; }
+.step-info h4 { font-size: 16px; margin-bottom: 2px; }
+.step-info p { font-size: 13px; color: #6b7280; }
+.step-time { font-size: 12px; color: #a855f7; font-weight: 600; }
+
+/* Order Details */
+.tracking-details {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .tracking-details { background: #1e293b; }
+
+.tracking-details h3 {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.dark-mode .detail-row { border-bottom-color: #334155; }
+
+/* Actions */
+.tracking-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.track-map-btn, .track-help-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.track-map-btn {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+}
+
+.track-help-btn {
+    background: white;
+    border: 2px solid #e5e7eb;
+    color: inherit;
+}
+
+.dark-mode .track-help-btn {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.track-map-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3); }

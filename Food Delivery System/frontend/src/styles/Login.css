@@ -1,0 +1,219 @@
+/* ================= LOGIN / REGISTER ================= */
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    padding: 20px;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+}
+
+.circle1 {
+    width: 200px; height: 200px;
+    background: #6366f1;
+    top: -50px; left: -50px;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.circle2 {
+    width: 150px; height: 150px;
+    background: #a855f7;
+    bottom: -30px; right: -30px;
+    animation: pulse 5s ease-in-out infinite;
+}
+
+.circle3 {
+    width: 100px; height: 100px;
+    background: #ec4899;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.login-card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    color: white;
+    animation: fadeIn 0.8s ease;
+}
+
+.login-card h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.login-card > p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #a855f7;
+}
+
+.input-group label {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    color: rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 12px;
+    font-size: 11px;
+    color: #a855f7;
+    background: #1e1b4b;
+    padding: 0 6px;
+    border-radius: 4px;
+}
+
+.role-select select {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.role-select select option {
+    background: #1e293b;
+    color: white;
+}
+
+.forgot-link {
+    text-align: right;
+    margin: -10px 0 16px;
+}
+
+.forgot-link a {
+    color: #a855f7;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-login:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.signup a {
+    color: #a855f7;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-error {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.auth-success {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #86efac;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,36 @@
+/* ================= RATING STARS ================= */
+.rating-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rating-stars.small .star { font-size: 16px; }
+.rating-stars.medium .star { font-size: 22px; }
+.rating-stars.large .star { font-size: 32px; }
+
+.star {
+    color: #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.star.filled {
+    color: #f59e0b;
+}
+
+.star:not(.readonly):hover {
+    transform: scale(1.2);
+}
+
+.star.readonly {
+    cursor: default;
+}
+
+.rating-value {
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #f59e0b;
+}
